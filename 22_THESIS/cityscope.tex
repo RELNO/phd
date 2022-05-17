@@ -1,0 +1,159 @@
+% -*- Mode:TeX -*-
+%\documentclass[12pt,twoside,leftblank]{style/mitthesis} 
+% ! remove draft mode for the final version 
+% \documentclass[11pt,twoside,draft]{style/mitthesis}
+\documentclass[11pt,twoside]{style/mitthesis}
+% ! remove draft mode for the final version 
+
+\usepackage{style/lgrind}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+% \usepackage{times}
+\usepackage{adjustbox}
+\usepackage{rotating}
+% for Verbatim font size
+\usepackage{fancyvrb}
+\usepackage{subcaption}
+\usepackage{enumitem}
+% tables 
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{lscape}
+
+\newenvironment{rotatepage}%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+
+% color tables 
+\usepackage[table,xcdraw]{xcolor}
+% tilde
+\usepackage{textcomp}
+% math 
+\usepackage{amsmath, bm, amsfonts}
+\newcommand\inlineeqno{\stepcounter{equation}\ (\theequation)}
+
+
+% ! remove draft mode for the final version
+% \usepackage{background}
+% \backgroundsetup{
+%   position=current page.east,
+%   angle=-90,
+%   nodeanchor=east,
+%   vshift=-5mm,
+%   opacity=1,
+%   scale=2,
+%   contents={Draft 4 - \today}
+% }
+
+\RequirePackage[hyphens]{url}
+% link colors 
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\hypersetup{
+    colorlinks   = true,
+    urlcolor     = blue,    % Colour for external hyperlinks
+  linkcolor    = blue,    % Colour of internal links
+  citecolor    = blue
+}
+\pagestyle{plain}
+\def\all{all}
+\ifx\files\all \typeout{Including all files.} \else
+% prevent replacing of objects
+\usepackage{placeins}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Hides the chapter number 
+\makeatletter
+\renewcommand{\thesection}{%
+    \ifnum\c@chapter<1 \@arabic\c@section
+    \else \thechapter.\@arabic\c@section
+    \fi
+}
+\makeatother
+
+% REMOVES FIGURES SECTION NUM
+\makeatletter
+\renewcommand*{\thetable}{\arabic{table}}
+\renewcommand*{\thefigure}{\arabic{figure}}
+\let\c@table\c@figure
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{%
+    \Huge CityScope\\
+    \Large {
+        An Urban modeling and Simulation Platform
+    }
+}
+\author{Ariel Noyman}
+\prevdegrees{
+    B.Arch, Bezalel Academy of Arts and Design, Jerusalem
+    \\
+    S.M., Massachusetts Institute of Technology
+}
+\department{Program in Media Arts and Sciences,\\ School of Architecture and Planning}
+\degree{Doctor of Philosophy in Media Arts and Sciences}
+\degreemonth{May 13\textsuperscript{th},}
+\degreeyear{2022}
+\thesisdate{May 13\textsuperscript{th}, '22}
+\supervisor{Kent Larson}{Director, City Science Group}
+\chairman{Kent Larson}{Director, City Science Group}
+\maketitle
+\setcounter{savepage}{\thepage}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstractpage}
+    \input{chapters/main/abstract}
+\end{abstractpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/main/signatures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{commiteepage}
+    \input{chapters/main/committee}
+\end{commiteepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/main/acknowledgments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!htb]
+    \begin{center}
+        \includegraphics[width=1\textwidth]{chapters/main/figures/hcu_workshop.png}
+    \end{center}
+    \caption{
+        A researcher interacting with the CityScope platform at the HafenCity University in Hamburg, Germany (Nov, `16). This was the final phase of a week-long CityScope workshop, in which researchers develop their own CityScope analysis modules and use them as part of an interactive planning discussion.
+    }
+    \label{fig:hcu_workshop}
+\end{figure}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/introduction/introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/insight/insight}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/transformation/transformation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/prediction/prediction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/consensus/consensus}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/conclusion/conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/appendix/appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoftables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{bib/biblio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

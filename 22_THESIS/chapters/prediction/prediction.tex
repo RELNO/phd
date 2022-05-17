@@ -1,0 +1,44 @@
+\chapter{Prediction}\label{ch:prediction}
+
+{
+    \section{Introduction}
+     {
+      The ability to predict the impact of transformation on urban environments is a critical aspect of city-planning. Unlike other industries, urban interventions cannot sustain trial-and-error or A-B testing, thus requiring high degree of confidence and well established risk-aversion mechanisms \cite{doi:10.1080/14649357.2015.1127994, banerjee2011companion}. Urban forecasting could be generally described via a two axes graph: (i) the prediction time-frame, and (ii) the social - physical spectrum (see Figure \eqref{fig:predictions_axis})
+      .\newline
+      For example, predicting the shadows casted by a new building, is directly correlated to the building's context, as well as to its bulk and shape. Evidently, as long as the earth spins around the sun, the results of shadow modeling should be consistent, and the model describing this phenomena could be reused indefinitely.
+      On the other end, a predictive model of potential human interaction in a public plaza, would share much less consistency across time and space. This model would heavily rely on social and cultural aspects, as well as physical attributes of the urban realm, such as the plaza's shape, or its proximity to certain amenities. This class of predictions, which focuses on spatial, temporal, and social aspects, is clearly harder to construct, validate, and reuse, but can make significant impact on decision-making. As reviewed in Section \eqref{subsec:andorra-data-observatory-mobility}, this class of predictions is slowly becoming mainstream in urban processes, with the growing access to location, activity, and behavioral data, as well as new computation and modeling techniques \cite{jiang2017activity, Calabrese2014, Batty2013, moro2021mobility}.
+     }
+
+    \begin{figure}[!htb]
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{chapters/prediction/figures/predictions_chart.png}
+        \end{center}
+        \caption{The landscape of urban predictions. This is a visual clustering of the high-dimensionality of different urban models. The horizontal axis represents the degree of `concreteness' for each prediction (i.e., where does this metric seats between the less tangible and more physical?). The vertical axis depicts the longevity of the prediction (i.e., how far into the future can this metric be predicted?). The size of the dots hints to the estimated span of the prediction across the two axes; For example, predicting shadows is more concrete and longer-term than predicting human behavioral patterns.}
+        \label{fig:predictions_axis}
+    \end{figure}
+
+    \section{CityScope Prediction: Case Studies}
+     {
+      The previous chapter discussed ways by which CityScope supports predictions of long-term, physical aspects of the built environment. These included assessments ranging from Gross Floor Area, storm-water runoff, and building energy, to more complex models, such as noise propagation (see \eqref{ch:transformation}).
+      \newline
+      This chapter focuses on a class of predictive models at the intersection of human behavior and the built environment. These projects combine geo-spatial attributes (such as urban form, POIs, and street network graphs), socio-behavioral properties (interpreted from high-resolution telecom data), and other discrete datasets.
+      In the \textit{CityScope MoCho} project (see Section \eqref{sec:modeChoices}), mobility mode choices were simulated using a city-wide synthetic population. Static data, such as census and National Household Travel Surveys (NHTS) were used to construct simulated profiles of daily commuters and assign them to home-work and 3rd places anchors. By interpreting plausible trips from socio-demographic data, the model forecasts how small scale changes to land-use can affect large scale mobility behaviors.
+      \newline
+      A simulated urban population can also help to understand emergence and agglomeration patterns. In CityScope \textit{Volpe}, \textit{Andorra} and \textit{Champs-Élysées} (see \eqref{sec:and_abm}, \eqref{sec:cityscope_volpe}, \cite{ChampsEl64:online}) Agent Based Models are used to simulate trips, `collision potential', and mode-choice changes caused by urban-design transformations. A similar approach was taken in the \textit{Hamburg Port-City Model} \cite{lopez2019testing}, in which an ABM was built to predicate changes to tourist activity in transit hubs and the city's port, given minor adjustments to queuing and boarding. A different type of predictions involves the usage of data-driven models to forecast implicit and `subtle' changes in urban environments. The \textit{DeepScope} \eqref{sec:deepscope} project uses Generative Adversarial Networks (GAN) to `imagine' streetscapes of future urban developments\footnote{Upcoming work in this domain will correlate behavioral patterns and user-experiences of urban streets, with the visual aspects of new urban development.}.
+      \newline
+      The rest of this chapter will describe how these implicit models were implemented in several CityScope projects.
+     }
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \input{chapters/prediction/mocho/mocho.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \input{chapters/prediction/deepscope/deepscope.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    \section{Discussion}
+     {
+      This Chapter discussed ways by which CityScope modules can support decision-making through the modeling of implicit aspects of the built environments. It focused on the impacts of urban development on temporal observations, such as mobility, and human dynamics in general \eqref{sec:revurb}, \eqref{sec:cityscope-mocho}, as well as demonstrated how the visual perception of urban-design can augment early-stage planning \eqref{sec:deepscope}. Further work in this field calls for urban models that seamlessly converge explicit and implicit aspects of urban development, and that can be used to support decision-making in complex scenarios \cite{dubey2016deep, moro2021mobility}. Work done on large-scale sentiment analysis of urban dwellers, thorough participatory or passive sensing, can be used in concert with traditional urban models to support the assessment of transformation. The next chapter, \textit{Consensus}, bring many of the ideas and techniques discussed in the first three chapters into a community-driven, and collaborative urban process, demonstrating how CityScope supported real-world decision-making in complex urban scenarios.
+     }
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+}
+

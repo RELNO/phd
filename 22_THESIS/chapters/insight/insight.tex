@@ -1,0 +1,67 @@
+
+
+\chapter{Insight\label{ch:insight}}
+
+\section{Introduction}
+ {
+
+  Prior to any change to the built environment, is the full understanding and evaluation of the current state of the city. Gaining meaningful insights can highlight places, policies, or behaviors in need for transformation, so that decision-makers can better focus their resources and efforts. As a complex systems of systems \cite{Batty2009}, the many different layers of information in the city are challenging to comprehend. Narrowing the spectrum of possible observations, through methodical data collection, accurate analysis, and clear representation, is a critical step towards a productive planning discourse \cite{banerjee2011companion}. This chapter discusses how CityScope is used to expose the current state of the city, focusing on data aggregation, analysis, and representation.
+
+
+  \subsection{From Static Data to Urban Dynamics}
+
+  {
+      In recent decades, many data-driven methodologies emerged to provide empirical assessments of urban performance \cite{Inostroza2015, hillier1987ideas}. In the 1970's, `Space Syntax' was proposed as a set of analytical tools to interpret the \textit{``ordering of space into relational systems''} \cite{Hillier1993}, using quantitative analysis to infer the performance of spatial networks. At the time, data accuracy and geometric-spatial limitations confined the results to generalized outputs \cite{herold2005role}. Today, the abundance of urban data and the advancement of spatial analytics greatly improve the resolution and accuracy of these evaluations \cite{Batty2000}. Nevertheless, urban performance cannot be solely interpreted by analyzing urban-form: the quality of a place is a joint artifact of physical places and the society which occupies them \cite{lynch1984good}. To associate form with behavior, Lynch proposed \textit{``Performance Dimensions''}: a set of spatial and experiential urban features, bridging the gap between form and usage. Along the same lines, Gehl suggested metrics to reflect the social impacts of a public space and the quality of life of its users \cite{gehl2013study}. Today, with the growing ubiquity of tracking devices and slew of behavioral data, it is possible to analyze the `real-time city', as a useful design and planning apparatus \cite{ Ratti2006, Kitchin2014, Batty2013}.
+  }
+
+  \subsection{Urban Dynamics: Mobility and Behavior}\label{subsec:andorra-data-observatory-mobility}
+
+  {
+      The growth of Location Based Services (LBS) motivated the research of the city's `beating pulse' \cite{Becker2011}. In recent decades, mobile devices became the major way to observe human dynamics, behavioral patterns, mobility, large public events, and emergencies \cite{Blondel2015, Calabrese2014, Reades2007, gonzalez2008understanding, Deville2014, Berlingerio2013}. Other location sensing technologies, such as GPS, radio frequency identification, cameras, or activity sensors, are all limited in their spatial capacity, the need for active user-interaction (`opt-in'), and complexity of data extraction.
+      \newline
+      Studies in Belgium, UK, Ivory Coast, and Spain showed correlations between the spatial form of cities, the distribution of their activity `hot-spots', and the degree of interaction between different cellular users \cite{Blondel2015, Louail2014}. Similarly, spatial-temporal regularity within behavioral trajectories was found in mobile phone users, suggesting that individuals can be clustered into different groups based on their behavioral patterns \cite{Song2010}. Others have used LBS to characterize individual trajectories across the city, showing collective behavior and `flocking' patterns \cite{Ratti2006, DecodingtheCity}. Despite the promise of location data for urban analytics, challenges still exist in data accuracy, temporal resolution, and bias.
+  }
+
+  \subsection{Limitations of LBS}
+
+  {
+      In the past, LBS limitations in data quantity, reliability, and accuracy have forced spatial generalization and limited outcomes \cite{candia2008uncovering}. In many cases, Call Detail Records (CDR) data were the prevailing LBS in use \cite{jiang2017activity}. CDR provide usage history, cell tower ID, and approximate coverage region of each base-station, which together are used to estimate the location-time of users. However, CDRs suffer from low temporal and spatial resolution, since location information is only provided at the cell tower level and updates are only received when the device is in use, such as during calls or text \cite{Calabrese2014}. Moreover, studies have shown that CDRs tend to underestimate the total travel distance and movement of users \cite{VonMorner2017}. The low accuracy and the event-triggered nature of CDR might be acceptable for mobility, sensing large events, or emergency analysis, but biases appear when attempting analyzing individual trajectories \cite{Zhao2016}. Higher resolution data could be obtained through signal strength aggregation of multiple cell towers (RSS), using geolocation techniques such as received signal strength and triangulation \cite{blondel2015survey}. More accurate telecom data, such as Radio Network Controller (RNC) data, can potentially help overcome these biases and better present individual patterns. In other cases, superimposing several data sources, such as LBS, GPS, census, and land-use all together, can improve the overall resolution of models and increase their accuracy \cite{Blondel2015}.
+  }
+  \newline
+  In summary, assessing mobility and behavior is still a challenge which require a large number of data sources and different analysis techniques. The following section details CityScope insight case-studies, ranging from static observations, such as land-use and population density, to urban-dynamics observations, such as movement, behavior, and interaction. It concludes with a discussion on the limitations, potential, and future of urban insights.
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CityScope Insights: Case Studies}
+
+ {
+  The following are CityScope \textit{insight} projects, focusing on spatial, temporal, and behavioral observations of the city. The \textbf{Urban Data Observatory} \cite{Hadhrawi2016} (2013-2016) visualized various pre-computed insight layers (such as urban form, mobility systems, solar emission, or wind regime) of the Kendall Square area in Cambridge, MA (see Section \eqref{sec:urbanobservatory}). In later projects, data analysis and visualization was used to inform the research question and establish metrics for interventions. In \textbf{CityScope Andorra} (2015-2016), LBS data were used to extract high-resolution mobility trajectories, to interpret how people move, by which modes of transportation, their daily routines, as well as their impact on congregation, `hot-spots', and points of interest (see Section \eqref{sec:andorra-data-observatory-andorra}). These insights can support urban-planning, traffic and energy optimization, tourism, large-event management, and more. As the following Chapter details, these insights are used as baseline for CityScope transformation processes.
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/insight/observatory/observatory}\label{sec:urbanobservatory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Urban Dynamics: CityScope Andorra}\label{sec:andorra-data-observatory-andorra}
+
+{
+    In 2014, the Andorran government and the MIT City Science group founded a `living lab' to prototype, deploy, and test urban innovation \cite{SmallEur15:online}. As part of this partnership, the Andorran Government promoted projects related to urban data collection and analysis, and supported this effort by sharing spatial, behavioral, and telecom data. Using these datasets, various research projects were proposed, including the analysis of tourism, mobility, urban-design, energy, environment, and public health \cite{9580719, Grignard:2018:CAM:3237383.3238030, leng2016analysis, noyman_inpress, doorley2020mpec}. The rest of this Chapter details case-studies that used these datasets for the purpose of gaining urban insights and supporting decision-making processes.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/insight/and_abm/and_abm}\label{sec:and_abm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/insight/revurb/revurb}\label{sec:revurb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion: From Data to Actionable Insights}
+
+ {
+  This Chapter discussed the potential of urban insights to inform decision-making in planning, mobility, energy, tourism, and other aspects. While some insights could be gained from viewing a narrow perspective of the city, more advanced urban insights are the product of superimposing many different observations and data layers, so that anomalies, edge-cases, and relevant questions would arise. If done right, insights are a powerful tool to initiate urban decision-making, and can begin to inform the development of urban policies, strategies, and counterfactual scenarios. Importantly, real-time and updated insights can reduce the risks associated with asynchronous planing processes, in which by the time development has started, the state of the city has already changed.
+  \newline
+  The next Chapter explore ways to utilize such insights in the process of transforming the built environment.
+ }
+
+

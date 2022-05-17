@@ -1,0 +1,419 @@
+\chapter*{Appendix}\label{chapter:appendix}
+\addcontentsline{toc}{chapter}{Appendix}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Appendix: CityScope Andorra}\label{appendix:cs_andorra}
+
+{
+    \begin{table}[h]
+        \begin{center}
+            \caption{All Urban Features (GP: Google Places, OSM: Open Street Map )}
+            \begin{tabular}{l|l|l}
+                \hline
+                Feature                & Source & Format        \\
+                \noalign{\hrule height 0.5pt}
+                \textbf{Amenities}     &        &               \\
+                \noalign{\hrule height 0.25pt}
+                Food                   & GP     & Point pattern \\
+                Education              & GP     & Point pattern \\
+                Entertainment          & GP     & Point pattern \\
+                Government             & GP     & Point pattern \\
+                Hotel                  & GP     & Point pattern \\
+                Religion               & GP     & Point pattern \\
+                Service                & GP     & Point pattern \\
+                Shopping               & GP     & Point pattern \\
+                Car Parks              & OSM    & Polygons      \\
+                Bus Stops              & OSM    & Point pattern \\
+                \noalign{\hrule height 0.25pt}
+                \textbf{Distances}     &        &               \\
+                \noalign{\hrule height 0.25pt}
+                d\_Motorized\_Streets  & OSM    & Raster        \\
+                d\_Pedestrian\_Streets & OSM    & Raster        \\
+                d\_City\_Center        & -      & Raster        \\
+                \noalign{\hrule height 0.25pt}
+                \textbf{Urban Form}    &        &               \\
+                \noalign{\hrule height 0.25pt}
+                Water                  & OSM    & Polygons      \\
+                Green Space            & OSM    & Polygons      \\
+                Buildings              & OSM    & Polygons      \\
+                \hline
+            \end{tabular}
+            \label{tab:andorra_model_features}
+        \end{center}
+    \end{table}
+
+
+    \subsection{MLR and Lasso MLR}\label{appendix:mlr_and_lasso_mlr}
+    {
+        MLR models each observation of the dependent variable as a linear combination of the observed explanatory variables with a zero-mean normally distributed random error: $Y =0+1X1 +2X2... + nXn + \in$, $\in \sim N(0, 2)$, where Y is the vector of observations of the dependent variable, 0 is the intercept term, $\theta_i$ is the coefficient of the $ith$ explanatory variable, $Xi$ is the vector of observations of the ith explanatory variable, n is the number of explanatory variables,  is the residual term and 2 is the variance of the residuals. The model is fitted by finding the values of the parameters 0 to n so that the sum of squared estimation errors is minimized.
+        MLR can provide intuitive insights into the relationship between variables, including p-values which indicate the level of statistical significance of a relationship. However, there is limited ability to control for model overfitting. For this reason, Lasso regression was also used in order to provide more rigorously validated model results. Lasso regression is an extension of MLR whereby the objective function to be minimized also includes a regularization term which causes simpler models to be favored. The degree of regularization is controlled by a parameter. However, if the degree of regularization is too great, it may lead to model underfitting, where the model is too simple to make accurate estimations. For this reason, the value of must be tuned in order to maximize the accuracy of the model when presented with unseen data. Tuning is done using a cross-validation (CV) procedure such as k-folds CV.
+    }
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Appendix: CityScope Playground} \label{appendix:playground}
+
+{
+
+    \subsection{Kendall Area History}
+
+    {
+        Soon after the construction of the West Boston Bridge in 1793, the eastern area of Cambridge became a major transportation center. The area, the closest land to Boston beyond the Charles River, provided direct rail routes to the city, allowing industry and commerce to grow into Cambridge. Kendall square remained an important industrial center during the 19\textsuperscript{th} century, hosting distilleries, power plants, soap and hoses factories along with other manufacturing facilities.
+        \newline
+        In 1916, MIT campus relocated to its current site on the Charles northern bank, later sprawling from Massachusetts Av. In the west to the Kendall Square area in the east. Due to new campus proximity, Kendall Square and the surrounding area have faced significant changes in terms of land-use and population distribution, raising land values and altering the industrial nature of the site. After WWII, most plants were shut down and moved to cheaper and more modern sites across the country, leaving the area neglected. Many of the remaining industrial spaces became home for MIT-related technology startups which developed exponentially after WWII. Nevertheless, the surrounding city remained mostly underdeveloped until the mid-1950's, when the Mayor of Cambridge together with the president of MIT, the City of Cambridge Redevelopment Authority and several real-estate developers planned Technology square. This initiative brought important corporations to set a branch across the streets of MIT. In the 1960's Kendall Square accommodated one of NASA's research centers alongside the first signs of private development. During the 1970's, The Marriott Hotel complex was built, improving the capacity and usability of the area. During the 1990's, The University park was developed along with private R\&D headquarters for several major tech companies.
+        \newline
+        The following is a partial list of plans, projects, studies, and regulatory amendments for Kendall Sq., and MIT East Campus:
+
+        1. The Cambridge Redevelopment Authority (CRA, 1955) major development in the Square is the Cambridge Center project, a 3 million square feet of office/research \& development served by hotels and retail uses.
+
+        2. The East Cambridge Riverfront Plan (1978-2002) began the process of moving away from the 1950's urban renewal approach. The Planned Unit Development (PUD), a subset of zoning regulations made to modify a specific tract, was established close to Kendall Square.
+
+        3. Technology Square Expansion (1999) resulted in a reconfiguration of the original 1960's project by breaking up the superblock and connecting a formerly isolated green plaza to Main Street.
+
+        4. The Eastern Cambridge Planning Study (ECaPS, 2001). With regard to Kendall Square, ECaPS Suggested that housing and ground floor retail would be beneficial along Third Street and created zoning incentives for these desired uses.
+
+        5. The Cambridge Research Park - Kendall Square PUD (1999) Masterplan expanded the area's biotech emphasis while creating new housing and public amenities.
+
+        6. The 303 Third Street PUD (2003) led to the construction of a new housing near the Watermark housing at Cambridge Research Park.
+
+        7. The Alexandria Rezoning (2009) adjacent to Kendall Square allowed for higher density research and development with ground floor retail and neighborhood-scale open spaces. A PUD Special Permit issued in 2010 allowed 1.5 million square feet of commercial use, 220,000 square feet of residential use, and 20,000 square feet of retail use.
+
+        8. The 650 Main Street Project (2009) in the MIT Osborn Triangle includes 400,000 square feet of office/research \& development use with ground floor retail.
+
+        9. MIT Projects made several additions to the urban environment under the envelope of the institute. Gehry's Stata Center (2000) and the Sloan School Project (2010) created new pedestrian gateways into the campus. The MIT Cancer Research Center (2010) reinforced Main Street by providing new shade trees, lighting, and seating areas.
+
+        10. The Boston Properties Rezoning for the Broad Institute (2010) increased by 300,000 square feet the amount of non-residential development allowed.
+    }
+
+
+    \subsection{Coding Scheme Analysis Results}\label{appendix:coding_scheme_results}
+    {
+        The following table shows the coding scheme analysis results for the two sessions:
+
+        \begin{table}[h]
+            \begin{center}
+                \caption{Interaction Results}
+                \begin{tabular}{l|llcc}
+                    Interaction Type & Code & Description                           & Group 1 & Group 2 \\
+                    \noalign{\hrule height 0.5pt}
+                    User to Object   & EXE  & Execution Problem                     & 1       & 1       \\
+                                     & DIS  & Discontinues Action                   & -       & 2       \\
+                                     & COR  & Corrective Action                     & 1       & 3       \\
+                                     & GOAL & Wrong Goal                            & -       & 1       \\
+                                     & PUZ  & Puzzled                               & 2       & 4       \\
+                                     & SCH  & Search for Non-existing Function      & 3       & 3       \\
+                                     & DIF  & Execution Difficulties                & 1       & -       \\
+                                     & REC  & Recognition of Error/Misunderstanding & -       & 2       \\
+                                     & HES  & Hesitation                            & 1       & 3       \\
+                                     & EXT  & Excitement                            & -       & 3       \\
+                                     & SUR  & Surprised                             & -       & 1       \\
+                                     & EXP  & Exploring                             & 4       & 6       \\
+                                     & FRT  & Frustration                           & -       & 2       \\
+                                     & DBT  & Doubt                                 & -       & 1       \\
+                    User to User     & ACC  & Acceptance of Idea                    & 4       & -       \\
+                                     & HAN  & Hand-over                             & 1       & -       \\
+                                     & CLA  & Clarification of Idea                 & 4       & 7       \\
+                                     & REF  & Refinement of Idea                    & 2       & -       \\
+                    User to Many     & IDE  & Introduction of Idea                  & 7       & 3       \\
+                                     & EVA  & Evaluation of Idea                    & 1       & 1       \\
+                                     & FLO  & Floor holding                         & 2       & -
+                \end{tabular}
+            \end{center}
+        \end{table}
+
+    }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Appendix: CityScope System Architecture} \label{appendix:system_architecture}
+{
+
+    \subsection{CityScope Schema: Output Format}\label{appendix:cityio_output_format}
+    {
+        \subsubsection{cityIO Ver. 1 (2016-2018)}
+        {
+            % \begin{noindent}
+            \begin{Verbatim}[baselinestretch=0.75, tabsize=4, fontsize=\small]
+                {
+                    "grid": [
+                        [1, 0],
+                        [16, 0],
+                        [2, 3], --> type `2', rotated 270°
+                        [4, 0], --> type `4', corresponding to a type in a shared lookup table 
+                        [-1, -1],
+                        [-1, -1], --> no type was found will return -1 as type and -1 as rotation
+                        ...
+                    ]
+                    }
+                \end{Verbatim}
+                % \end{noindent}
+        }
+
+        \subsubsection{cityIO Ver. 2 (2018-Current)}
+        \begin{Verbatim}[baselinestretch=0.75, tabsize=4, fontsize=\small]
+
+            %\begin{noindent}
+            {
+                {
+                    "type": "FeatureCollection",
+                    "properties": {
+                        "header": {},
+                        "interactive_mapping": {
+                            "1245": {
+                                "TUI": "1" --> TUI interaction
+                            },
+                            "1472": {
+                                "WEB": "1" --> web-only interaction
+                            }
+                        }
+                    },
+                    "features": [
+                            {
+                                "type": "Feature",
+                                "properties": {...},
+                                "geometry": {
+                                    "type": "Polygon",
+                                    "coordinates": [
+                                    [
+                                        [
+                                        "lat",
+                                        "lon"
+                                            ]
+                                        ]
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+            %\end{noindent}
+        \end{Verbatim}
+
+    }
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \subsection{CityScope Schema: NAICS}\label{appendix:schema-description}
+    {
+        \begin{itemize}
+            \item X 0 0 0 0 - First level classification - Industry Sector
+            \item XX 0 0 0 - 2nd level - Industry Sub sector
+            \item XXX 0 0 - 3rd level - Industry Group
+            \item XXXX 0 - 4th level - Industry
+        \end{itemize}
+    }
+
+    \subsection{CityScope Schema: LBCS}
+    {
+        \begin{itemize}
+            \item X 0 0 0 - First level classification - General
+            \item XX 0 0 - 2nd level - Type
+            \item XXX 0 - 3rd level - Activity
+            \item XXXX - 4th level - Specific Activity
+        \end{itemize}
+    }
+
+    \subsection{CityScope Schema: Sample Types}\label{appendix:sample-cs-types}
+    {
+        The following are several typical types in the CityScope schema. More complex types can be created by combining these types, and by adding new types using the NAICS and LBCS codes:
+
+        \subsubsection{Park}\label{park}
+        {
+            No floors, only `park' activity. NAICS = 712190. LBCS = 7000
+
+            % \begin{noindent}
+            \begin{Verbatim}[baselinestretch=0.75, tabsize=4, fontsize=\small]
+                {
+                    "NAICS": [
+                        {
+                            "P": 1,
+                            "use": [
+                                {
+                                        "712190": 1
+                                    }
+                            ],
+                        },
+                    ],   
+                    "LBCS": [
+                        {
+                            "P": 1,
+                            "use": [
+                                {
+                                        "7000": 1
+                                    }
+                            ]
+                        }
+                    ]
+                }
+                
+            \end{Verbatim}
+            % \end{noindent}
+
+        }
+        \subsubsection{Residential}\label{household-activities-residential-activities}
+
+        {
+            Individual residential building. LBCS = 1100. NAICS = null  --> NAICS is used for commercial activity, and so `pure' residential usages is not included. However, NAICS Code 531110 - Lessors of Residential Buildings, can be considered for commercial residential activity.
+
+            % \begin{noindent}
+            \begin{Verbatim}[baselinestretch=0.75, tabsize=4, fontsize=\small]
+                {
+                    "NAICS": null,
+                    "LBCS": [
+                        {
+                            "P": 1,
+                            "use": [
+                                {
+                                        "1100": 1
+                                    }
+                            ]
+                        }
+                    ]
+                }
+            \end{Verbatim}
+            % \end{noindent}
+        }
+
+        \subsubsection{Mixed-use}\label{mixed-use-building-finance-public-administration-shopping-restaurants}
+        {
+            Office and Shopping building: 80\% of Financial activities, 20\% of Retail and Food activities. NAICS mapping = 520000: Finance, 920000: Public Administration, 440000 + 45000: Shopping, and 720000: restaurant. LBCS mapping = 2200: Finance, 6200 + 6300: Public Administration, 2100: Shopping, and 2500: Restaurant
+
+            \begin{itemize}
+                \item The lower 20\% is a mix of shopping 75\% and restaurants 25\%
+                \item The upper 80\% of floors and is devoted to a mix of Finance 50\% and Public Administration 50\% \end{itemize}
+
+            % \begin{noindent}
+            \begin{Verbatim}[baselinestretch=0.75, tabsize=4, fontsize=\small]
+                {
+                    "NAICS": [
+                        {
+                            "P": 0.2,
+                            "use": [
+                                {
+                                        "720000": 0.25,
+                                        "440000": 0.40,
+                                        "450000": 0.35
+                                    }
+                            ]
+                        },
+                        {
+                            "P": 0.8,
+                            "use": [
+                            {
+                                    "520000": 0.5,
+                                    "920000": 0.5
+                                }
+                            ],
+                        },
+                    ],
+                    "LBCS": [
+                        {
+                            "P": 0.2,
+                            "use": [
+                                {
+                                        "2100": 0.5,
+                                        "2500": 0.5
+                                    }
+                            ]
+                        },
+                        {
+                            "P": 0.8,
+                            "use": [
+                                {
+                                        "2200": 0.5,
+                                        "6200": 0.25,
+                                        "6300": 0.25
+                                    }
+                            ]
+                        }
+                    ]
+                }
+            \end{Verbatim}
+            % \end{noindent}
+        }
+    }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{CityScoPy Methods}
+{
+    The following methods are used in the CityScoPy package:
+
+    \begin{table}[h]
+        \begin{center}
+            \caption{CityScoPy Methods}
+            \label{appendix:cityscopymethods}
+            \begin{tabular}{l|lc}
+                \hline
+                Method                          & Usage                             & Blocking \\
+                \noalign{\hrule height 0.5pt}
+                \verb|cityscopy.keystone()|     & initial keystone and save to file &          \\
+                \verb|cityscopy.scan()|         & main scanning and sending method  & x        \\
+                \verb|cityscopy.udp_listener()| & emulate local UDP server listener & x        \\
+                \hline
+            \end{tabular}
+            \label{features}
+        \end{center}
+    \end{table}
+
+    \verb|Cityscopy.keystone()| \textit{Align camera feed to the grid} This method handles the keystone process. It allow users to keystone the camera feed by performing non-affine matrix transformations over a polygon, and save the keystone to a file. This file will be used in the following method for initial alignment of the camera.
+    \newline
+    \verb|Cityscopy.scan()| \textit{Scanning and Sending method} This method handles scanning, parsing, composing sendable packets, and sending data to either remote sever (via HTTP) or local machine (UDP). The scanner aims to detect colors in arrays of 2D-pixel arrays, and conclude if its white or black (0 or 1). Then, these color arrays will be compared to list of `tags' attributes; the tool will return a list of `type' and `rotation' for each of the scanned arrays. This list is then converted to JSON format and can be sent using POST request. The app will attempt sending the resulted scan to cityIO server.
+    \newline
+    \verb|Cityscopy.udp_listener()| This method emulates what a UDP client might see if `cityscopy` would send scans over localhost. This method is used for testing purposes.
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% MOCHO %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Appendix: CityScope MoCho}
+ {
+  \begin{table}[h]
+      \begin{center}
+          \caption{Multinomial Logit model calibration Results}\label{appendix:mocho-tab-results}
+          \begin{tabular}{l|c c c}
+              \hline
+              \textbf{Features}                 & \textbf{Cycle} & \textbf{Walk} & \textbf{Transit} \\
+              \hline
+              alternative\_specific\_constant   & -6.2687        & -4.2422       & -4.0632          \\
+              employment\_density\_home\_tract  & 9.6306         & 23.0826       & 9.7915           \\
+              employment\_density\_work\_tract  & 4.3132         & 9.1642        & 13.4858          \\
+              residential\_density\_home\_tract & 47.2316        & 75.5508       & 53.945           \\
+              residential\_density\_work\_tract & 32.9934        & -             & 30.7119          \\
+              age\_youngest                     & 0.6831         & 0.4743        & 0.31             \\
+              age\_oldest                       & -              & -             & -0.1701          \\
+              income\_lowest                    & 0.3672         & 0.4887        & 0.2788           \\
+              college\_degree                   & 0.8974         & 0.4997        & 0.1427           \\
+              grad\_degree                      & 0.4789         & 0.1884        & -                \\
+              female                            & -0.7425        & -             & 0.0864           \\
+              renter                            & 0.5955         & 0.7435        & 0.7031           \\
+              non\_profit\_worker               & 0.8203         & 0.376         & 0.2227           \\
+              \cline{2-4}
+                                                &                & \textbf{All}  &                  \\
+              \cline{2-4}
+              walking time                      &                & -0.0004       &                  \\
+              vehicle\_time                     &                & -0.0002       &                  \\
+              cycling time                      &                & -0.0005       &                  \\
+              cost                              &                & -0.1424       &                  \\
+              \hline
+          \end{tabular}
+      \end{center}
+  \end{table}
+ }
+
+

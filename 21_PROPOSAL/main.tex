@@ -1,0 +1,79 @@
+\documentclass[11pt,twoside]{style/mitthesis}
+\usepackage{style/lgrind}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+
+
+\pagestyle{plain}
+\def\all{all}
+\ifx\files\all \typeout{Including all files.} \else 
+\begin{document}
+
+
+
+% Hides the chapter number 
+% ! REMOVE IN THESIS
+\makeatletter
+\renewcommand{\thesection}{%
+  \ifnum\c@chapter<1 \@arabic\c@section
+  \else \thechapter.\@arabic\c@section
+  \fi
+}
+\makeatother
+
+% REMOVE FIGURES SECTION NUM
+% ! REMOVE IN THESIS
+\makeatletter
+\renewcommand*{\thetable}{\arabic{table}}
+\renewcommand*{\thefigure}{\arabic{figure}}
+\let\c@table\c@figure
+\makeatother 
+
+% \title{CityScope: Urban Insight, Prediction, Transformation, and Consensus}
+
+\title{%
+  \Large CityScope\\
+  \small From Smart City to Street Knowledge
+ }
+% 
+
+%
+
+\author{Ariel Noyman}
+\department{Program in Media Arts and Sciences}
+\degree{Doctor of Philosophy in Media Arts and Sciences}
+\degreemonth{}
+\degreeyear{}
+\thesisdate{April '21}
+\supervisor{Kent Larson}{Director, City Science Group}
+\chairman{Kent Larson}{Director, City Science Group}
+\maketitle
+\setcounter{savepage}{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstractpage}
+\input{chapters/abstract}
+\end{abstractpage}
+% Committee Members
+% see special namespace
+\begin{commiteepage}
+\input{chapters/committee}
+\end{commiteepage}
+\tableofcontents
+\pagestyle{plain}
+\include{chapters/proposal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \appendix
+% \newpage
+% \listoffigures
+% \newpage
+% \listoftables
+\include{bib/biblio}
+\end{document}
+

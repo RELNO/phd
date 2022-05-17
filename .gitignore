@@ -1,0 +1,10 @@
+*.aux
+*.gz
+*.log
+*.pdf
+*.tmp
+*.bak
+.DS_Store
+**/.DS_Store
+!22_THESIS/final/**
+22_THESIS/final/.DS_Store

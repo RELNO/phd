@@ -1,0 +1,31 @@
+\chapter{Transformation}\label{ch:transformation}
+{
+    \section{Introduction}
+     {
+      As previously discussed (see Chapter \eqref{ch:insight}), the role of insights is to focus the urban discussion on specific challenges, and establish clear KPIs to evaluate future interventions. The next step is to introduce and evaluate change to the city, in the from of urban \textit{Transformation}: an iterative exploration of design interventions and policies, set to transfer the city from its current state to another. In CityScope, evaluating transformation is possible through a wide range of Urban Human Computer Interaction (UHCI) methodologies, systems, and interfaces. Unlike traditional city-planning practices, CityScope is built for synchronous design exploration, in which evaluation of many design proposals is conducted simultaneously, while being fed by real-time data and analysis. To achieve this capability, CityScope has two main streams of development: (i) \textbf{CityScope UHCI:} The creation of iterative user interfaces, both tangible and digital, and (ii) the design of \textbf{CityScope Modules:} real-time models, simulations, and metrics which provide feedback during design sessions\footnote{Chapter \eqref{chapter:introduction} and \eqref{subsec:emergence_uhci} explore the origins of UHCI, the state of the art tools and systems developed over the years, as well the challenges associated with this systems.}.
+
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      \subsection{Urban Transformation: UHCI Systems and Case studies}
+      {
+          This chapter has two main parts: (i) The first details CityScope technologies that were developed for real-time, iterative, and interactive urban  decision-making processes. These include the development of a data standard across CityScope projects; the integration of different TUI, computer-vision systems, AR, VR, and other interfaces; and the development of a web-based, platform-agnostic interaction and feedback system for CityScope. (ii) The second part of this chapter explores the implementation of these technologies in key CityScope projects, focussing on their usability, impact, shortcomings, and potentials for future planning processes.
+      }
+     }
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{chapters/transformation/cs_arch/cs_arch.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{chapters/transformation/playground/playground.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{chapters/transformation/volpe/volpe.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{chapters/transformation/grasbrook/grasbrook.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{Discussion: UHCI for Urban Transformation}
+     {
+      This chapter explored the core design principles of the CityScope platform, and the ways it supports several urban transformation processes in real-world planning context. It reviewed the CityScope ecosystem, with an emphasis on the interoperability of data and analysis using the CityScope Schema, cityIO, backend modules, and frontend interfaces.
+      Most use-cases in this chapter demonstrated the way CityScope supports the analysis of rather traditional urban indicators, such as accessibility, energy, urban-from, or vehicular mobility. Yet beyond these metrics, CityScope aims to asses and predict more subtle urban indicators, such as human interaction and social dynamics. The next chapter, \textit{Prediction} \eqref{ch:prediction}, looks into CityScope models and modules used to provide predictive analysis on more implicit matrices. It focuses on questions of movement, social dynamics, as well as the appearance of the city, as proxies to the evaluation of changes in the built environment.
+     }
+
+}
